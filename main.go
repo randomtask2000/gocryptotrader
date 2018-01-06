@@ -23,6 +23,7 @@ import (
 	"github.com/thrasher-/gocryptotrader/exchanges/coinut"
 	"github.com/thrasher-/gocryptotrader/exchanges/gdax"
 	"github.com/thrasher-/gocryptotrader/exchanges/gemini"
+	"github.com/thrasher-/gocryptotrader/exchanges/hitbtc"
 	"github.com/thrasher-/gocryptotrader/exchanges/huobi"
 	"github.com/thrasher-/gocryptotrader/exchanges/itbit"
 	"github.com/thrasher-/gocryptotrader/exchanges/kraken"
@@ -56,6 +57,7 @@ type ExchangeMain struct {
 	liqui         liqui.Liqui
 	localbitcoins localbitcoins.LocalBitcoins
 	poloniex      poloniex.Poloniex
+	hitbtc        hitbtc.HitBTC
 	huobi         huobi.HUOBI
 	kraken        kraken.Kraken
 }
@@ -156,6 +158,7 @@ func main() {
 		new(liqui.Liqui),
 		new(localbitcoins.LocalBitcoins),
 		new(poloniex.Poloniex),
+		new(hitbtc.HitBTC),
 		new(huobi.HUOBI),
 	}
 
